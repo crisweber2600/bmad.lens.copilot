@@ -1,0 +1,15 @@
+schema: 1
+repo: bmad.lens.copilot
+source:
+  seeded_from_repo: bmad.lens.release
+  seeded_from_branch: 5.0
+  seeded_on_utc: "2026-02-28T00:00:00Z"
+contents:
+  root: .github
+  includes:
+    - agents
+    - prompts
+    - stubPrompts
+    - instructions
+    - copilot-instructions.md
+    - lens-work-instructions.md
