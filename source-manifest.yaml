@@ -5,7 +5,8 @@ source:
   seeded_from_branch: 5.0
   seeded_on_utc: "2026-02-28T00:00:00Z"
 contents:
-  root: .github
+  root: .
+  materialize_target: .gihub
   includes:
     - agents
     - prompts

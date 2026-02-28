@@ -8,10 +8,15 @@ if (-not (Test-Path $source)) {
   throw "Release repo .github not found: $source"
 }
 
-if (Test-Path ".github") {
-  Remove-Item ".github" -Recurse -Force
-}
+Get-ChildItem . -Force |
+  Where-Object {
+    $_.Name -ne ".git" -and
+    $_.Name -ne "README.md" -and
+    $_.Name -ne "scripts"
+  } |
+  ForEach-Object {
+    Remove-Item $_.FullName -Recurse -Force
+  }
 
-New-Item -ItemType Directory -Path ".github" | Out-Null
-Copy-Item (Join-Path $source "*") ".github" -Recurse -Force
-Write-Host "Synced .github from $ReleaseRepoPath"
+Copy-Item (Join-Path $source "*") "." -Recurse -Force
+Write-Host "Synced release .github content into copilot repo root from $ReleaseRepoPath"

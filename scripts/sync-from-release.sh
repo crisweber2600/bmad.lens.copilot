@@ -12,8 +12,12 @@ if [[ ! -d "$release_repo/.github" ]]; then
   exit 1
 fi
 
-rm -rf .github
-mkdir -p .github
-cp -R "$release_repo/.github/." .github/
+find . -mindepth 1 -maxdepth 1 \
+  ! -name '.git' \
+  ! -name 'README.md' \
+  ! -name 'scripts' \
+  -exec rm -rf {} +
 
-echo "Synced .github from $release_repo"
+cp -R "$release_repo/.github/." .
+
+echo "Synced release .github content into copilot repo root from $release_repo"
