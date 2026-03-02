@@ -1,100 +1,16 @@
-﻿```prompt
+````prompt
 ---
-description: 'Create user profile, set up GitHub PAT, and bootstrap TargetProjects for new team members (@lens/discovery)'
+description: 'Create user profile, set up GitHub PAT, and bootstrap TargetProjects for new team members'
 ---
 
-Activate @lens agent and execute /onboard (discovery skill):
+# lens-work.onboard (Stub)
 
-**⚠️ PATH CONTEXT:** All `_bmad/` paths in this prompt are relative to the `bmad.lens.release` control repository (where this prompt file lives). Do NOT copy `_bmad/` into or resolve these paths against the user's main project repo. The agent, workflows, and skills all execute from within `bmad.lens.release/`. Only `_bmad-output/` paths are written to the user's working context.
+> **This is a stub.** Load and execute the full prompt from the bmad.lens.release control repository.
+> All `_bmad/` paths in the full prompt are relative to `bmad.lens.release/` — do NOT copy `_bmad/` into or resolve paths against the user's main project repo.
 
-1. Load `@lens` agent: `_bmad/_config/custom/lens-work/lens.agent.yaml`
-2. Execute `/onboard` command — full onboarding workflow
-3. Load `_bmad/lens-work/workflows/utility/onboarding/workflow.md`
-4. Load repo inventory from `_bmad-output/lens-work/repo-inventory.yaml` (if exists)
-
-This is the **first-run workflow** for new team members. It sets up profile, credentials, and clones target repos.
-
-**Execution sequence:**
-
-**[1] Welcome**
-- @lens/discovery greets the user and explains the process: profile → credentials → repos
-
-**[2] Create Profile**
-- Read `git config user.name` and `git config user.email`
-- Detect GitHub domains from repo inventory
-- Check if PAT env vars are already set (GITHUB_PAT, GH_ENTERPRISE_TOKEN, GH_TOKEN)
-- If all domains covered: report [OK] status and skip PAT question entirely
-- Present combined prompt asking for:
-  - Role (Developer / Tech Lead / Architect / Product Owner / Scrum Master)
-  - Domain/team scope (detected from repo inventory, or "all")
-  - PAT setup now? [Y/N] — **only shown if env vars are missing**
-  - Question mode (Interactive / Batch MD)
-  - Work item tracker (Jira / Azure DevOps / None)
-- Write profile to `_bmad-output/lens-work/personal/profile.yaml` (gitignored)
-
-**[3] GitHub PAT Setup (if needed and requested)**
-
-⚠️ SECURITY: PATs must NEVER be entered into Copilot chat.
-
-**Option A: Environment variables (recommended for CI/automation)**
-Set environment variables for automatic PAT resolution:
-- `GITHUB_PAT` — PAT for github.com
-- `GH_ENTERPRISE_TOKEN` — PAT for enterprise GitHub instances
-- `GH_TOKEN` — fallback for both (used by GitHub REST API)
-
-**Option B: Interactive script (stores PAT in profile.yaml)**
-Present the following command for the user to run in a **separate terminal**:
-
-```bash
-# macOS / Linux / Git Bash
-cd "{PROJECT_ROOT}" && bash bmad.lens.release/_bmad/lens-work/scripts/store-github-pat.sh
-
-# Windows PowerShell
-cd "{PROJECT_ROOT}"; .\bmad.lens.release\_bmad\lens-work\scripts\store-github-pat.ps1
+```
+Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.onboard.prompt.md
 ```
 
-- Wait for user to confirm ("Continue" / "Done")
-- Check if `_bmad-output/lens-work/personal/profile.yaml` was created with `git_credentials` array
-- Credentials stored per GitHub domain (github.com, enterprise domains detected from repo inventory)
-- **These credentials enable automated PR creation** in:
-  - Phase completion workflows (preplan, businessplan, techplan, devproposal, sprintplan)
-  - Audience promotion workflows (small→medium→large)
-  - Manual promotion via `promote-branch.ps1` script
-- If PATs not configured, workflows will generate PR URLs only (manual creation required)
-
-**[4] Repo Discovery & Reconciliation**
-- Load service map: `_bmad/lens-work/service-map.yaml`
-- Scan configured target repos in service map
-- Identify which repos are already cloned vs missing
-- Clone missing repos into `TargetProjects/` using configured remote URLs
-
-**[5] Completion**
-```
-🎉 Onboarding Complete!
-
-Profile: {name} ({role})
-Scope:   {scope}
-
-What's ready:
-├── ✅ Profile created
-├── ✅ {cloned_count} repos cloned
-└── ✅ PATs configured
-
-Next steps:
-├── Run #new-feature "your-feature" to start an initiative
-├── Run @lens ST to see status anytime
-└── Run @lens H for help
-```
-
-**Storage locations (all gitignored):**
-- Profile: `_bmad-output/lens-work/personal/profile.yaml`
-- Roster: `_bmad-output/lens-work/roster/{name-slug}.yaml`
-- Repo inventory: `_bmad-output/lens-work/repo-inventory.yaml`
-- Personal repo state: `_bmad-output/lens-work/personal/personal-repo-inventory.yaml`
-
-**Re-run behavior:** If profile already exists, present a menu:
-- [1] Update profile settings
-- [2] Re-run credential setup
-- [3] Re-sync repos
-- [4] Full re-onboard (reset all)
-```
+Source: [lens-work.onboard.prompt.md](https://github.com/crisweber2600/bmad.lens.release/blob/release/2.0.0/.github/prompts/lens-work.onboard.prompt.md)
+````
