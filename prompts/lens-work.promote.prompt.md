@@ -1,101 +1,16 @@
-﻿```prompt
+````prompt
 ---
-description: Promote the active initiative to the next audience level — runs the appropriate gate and creates a promotion PR (@lens)
+description: 'Promote the active initiative to the next audience level — runs the appropriate gate and creates a promotion PR'
 ---
 
-Activate @lens agent and execute /promote:
+# lens-work.promote (Stub)
 
-**⚠️ PATH CONTEXT:** All `_bmad/` paths in this prompt are relative to the `bmad.lens.release` control repository (where this prompt file lives). Do NOT copy `_bmad/` into or resolve these paths against the user's main project repo. The agent, workflows, and skills all execute from within `bmad.lens.release/`. Only `_bmad-output/` paths are written to the user's working context.
+> **This is a stub.** Load and execute the full prompt from the bmad.lens.release control repository.
+> All `_bmad/` paths in the full prompt are relative to `bmad.lens.release/` — do NOT copy `_bmad/` into or resolve paths against the user's main project repo.
 
-1. Load `@lens` agent: `_bmad/_config/custom/lens-work/lens.agent.yaml`
-2. Execute `/promote` command
-3. Load lifecycle contract: `_bmad/lens-work/lifecycle.yaml`
-4. Load `_bmad/lens-work/workflows/core/audience-promotion/workflow.md`
-5. Pre-flight: verify clean working directory, load two-file state
-
-Use `#think` before determining which gate to run and which phases must be complete.
-
-**Promotion chain (from lifecycle contract):**
 ```
-small   →  medium   gate: adversarial-review   (party mode, lead: Winston)
-medium  →  large    gate: stakeholder-approval  (manual confirmation)
-large   →  base     gate: constitution-gate     (constitution skill validates all artifacts)
+Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.promote.prompt.md
 ```
 
-**⚠️ CRITICAL — Interactive Workflow Rules (for party-mode gates):**
-- 🛑 **NEVER** auto-complete or batch-generate review content without user input
-- ⏸️ **ALWAYS** STOP and wait for user input/confirmation at each review step
-- 📋 Back-and-forth dialogue is REQUIRED — you are a facilitator, not a generator
-
-**[0] Pre-Flight**
-- Git-orchestration: verify clean git state
-- Load `state.yaml` + active initiative config
-- Derive `source_audience` from current state
-- Derive `target_audience` from lifecycle promotion chain
-- Validate track allows this promotion (check `lifecycle.tracks[track].audiences`)
-
-**[1] Validate Source Audience Phases Complete**
-- Determine required phases: intersection of `lifecycle.audiences[source].phases` + `lifecycle.tracks[track].phases`
-- For each required phase: verify `phase_status[phase] == "complete"` (PR merged into source audience branch)
-- For `pr_pending` phases: run ancestry check (`git merge-base --is-ancestor`)
-- BLOCK if any required phase is incomplete
-
-**[2] Run Promotion Gate**
-
-**small → medium (adversarial-review — party mode):**
-- Collect artifacts from all small-audience phases (`product-brief.md`, `prd.md`, `architecture.md`)
-- For each artifact: Read fully and follow `_bmad/core/workflows/party-mode/workflow.md`
-- Participants (adopt each persona in turn):
-  - Winston (Architect) — `_bmad/bmm/agents/architect.md` (lead reviewer)
-  - Mary (Analyst) — `_bmad/bmm/agents/analyst.md`
-  - Sally (UX Designer) — `_bmad/bmm/agents/ux-designer.md`
-- Write review to `{docs_path}/reviews/promotion-small-to-medium-{artifact}-review.md`
-- BLOCK if any artifact fails party-mode review
-
-**medium → large (stakeholder-approval):**
-- Display review package: `epics.md`, `stories.md`, `readiness-checklist.md`
-- Ask: "Has stakeholder approved? [Y]es / [N]o"
-- If No: pause promotion (user resumes later)
-- If Yes: gate passes
-
-**large → base (constitution-gate — constitution skill):**
-- Constitution skill resolves constitutional context (`constitution.resolve-context`)
-- Constitution skill runs full compliance check on all planning artifacts
-- 4-level inheritance: Org → Domain → Service → Repo
-- BLOCK if `fail_count > 0` (warnings allowed — recorded as `passed_with_warnings`)
-
-**[3] Create Promotion PR**
-- Verify PAT configured: Check for `GITHUB_PAT` or `GH_ENTERPRISE_TOKEN` environment variable, or `_bmad-output/lens-work/personal/profile.yaml` has `git_credentials` for current git host
-- If PAT missing: Direct user to set `GITHUB_PAT` env var (or `GH_ENTERPRISE_TOKEN` for enterprise) or run `store-github-pat.ps1`/`store-github-pat.sh` in separate terminal, then retry
-- Create PR using promote-branch script: `_bmad/lens-work/scripts/promote-branch.sh -s {initiative_root}-{source_audience} -t {initiative_root}-{target_audience}` (or `.ps1` on Windows)
-- Title: `[promotion] {source_audience} → {target_audience}: {initiative.name}`
-- Body includes: phases included, artifacts reviewed, gate status
-
-**[4] Update State**
-- Update `audience_status.{source}_to_{target}: pr_pending` in initiative config
-- Record PR URL, PR number, gate type, gate status, timestamp
-- Update `state.yaml`: `workflow_status: promotion_pr_pending`
-- Append events to `event-log.jsonl`
-
-**[5] Output**
-```
-✅ Audience Promotion: {source} → {target}
-
-Initiative: {name} ({id})
-Gate:       {gate_type} — PASSED
-PR:         {pr_url}
-Status:     pr_pending (awaiting merge)
-
-Next steps:
-{small→medium}  Merge PR, then run /devproposal
-{medium→large}  Merge PR, then run /sprintplan
-{large→base}    Merge PR, then run /dev
-```
-
-**CRITICAL — never auto-merge:** The promotion PR must be merged by the user.
-Remain on the current branch after creating the PR (REQ-7).
-
-**Manual invocation with explicit audiences:**
-`/promote small medium` — override audience detection and promote directly
-`/promote` — auto-detect from current state (default)
-```
+Source: [lens-work.promote.prompt.md](https://github.com/crisweber2600/bmad.lens.release/blob/release/2.0.0/.github/prompts/lens-work.promote.prompt.md)
+````
