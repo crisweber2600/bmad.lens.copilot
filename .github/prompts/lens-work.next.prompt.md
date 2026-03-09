@@ -1,6 +1,6 @@
 ````prompt
 ---
-description: 'Recommend the next actionable task based on lifecycle state'
+description: 'Recommend next action based on lifecycle state'
 ---
 
 # lens-work.next (Stub)
@@ -11,4 +11,5 @@ description: 'Recommend the next actionable task based on lifecycle state'
 ```
 Read and follow all instructions in: bmad.lens.release/_bmad/lens-work/prompts/lens-work.next.prompt.md
 ```
+
 ````

@@ -1,6 +1,6 @@
 ````prompt
 ---
-description: 'Bootstrap a new control repo and onboard the user to lens-work v2'
+description: 'Bootstrap control repo — detect provider, validate auth, create profile'
 ---
 
 # lens-work.onboard (Stub)
@@ -11,4 +11,5 @@ description: 'Bootstrap a new control repo and onboard the user to lens-work v2'
 ```
 Read and follow all instructions in: bmad.lens.release/_bmad/lens-work/prompts/lens-work.onboard.prompt.md
 ```
+
 ````

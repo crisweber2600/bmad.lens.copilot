@@ -11,4 +11,5 @@ description: 'Show available commands and usage'
 ```
 Read and follow all instructions in: bmad.lens.release/_bmad/lens-work/prompts/lens-work.help.prompt.md
 ```
+
 ````

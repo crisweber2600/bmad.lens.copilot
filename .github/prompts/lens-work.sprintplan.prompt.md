@@ -1,6 +1,6 @@
 ````prompt
 ---
-description: 'Start SprintPlan phase — sprint status, story files (Bob/SM, large audience)'
+description: 'Start SprintPlan phase — sprint-status, story files (Bob/Scrum Master, large audience)'
 ---
 
 # lens-work.sprintplan (Stub)
@@ -11,4 +11,5 @@ description: 'Start SprintPlan phase — sprint status, story files (Bob/SM, lar
 ```
 Read and follow all instructions in: bmad.lens.release/_bmad/lens-work/prompts/lens-work.sprintplan.prompt.md
 ```
+
 ````

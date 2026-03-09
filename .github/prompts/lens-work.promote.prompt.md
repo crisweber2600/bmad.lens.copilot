@@ -1,6 +1,6 @@
 ````prompt
 ---
-description: 'Promote the active initiative to the next audience level — runs gate checks and creates a promotion PR'
+description: 'Promote current audience to next level with gate checks'
 ---
 
 # lens-work.promote (Stub)
@@ -11,4 +11,5 @@ description: 'Promote the active initiative to the next audience level — runs 
 ```
 Read and follow all instructions in: bmad.lens.release/_bmad/lens-work/prompts/lens-work.promote.prompt.md
 ```
+
 ````
