@@ -9,7 +9,7 @@ description: 'Promote current audience to next level with gate checks'
 > All `_bmad/` paths in the full prompt are relative to `bmad.lens.release/` — do NOT resolve paths against the user's main project repo.
 
 ```
-Read and follow all instructions in: bmad.lens.release/_bmad/lens-work/prompts/lens-work.promote.prompt.md
+Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.promote.prompt.md
 ```
 
 ````

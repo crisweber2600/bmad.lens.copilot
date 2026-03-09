@@ -9,7 +9,7 @@ description: 'Start TechPlan phase — architecture document, technical decision
 > All `_bmad/` paths in the full prompt are relative to `bmad.lens.release/` — do NOT resolve paths against the user's main project repo.
 
 ```
-Read and follow all instructions in: bmad.lens.release/_bmad/lens-work/prompts/lens-work.techplan.prompt.md
+Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.techplan.prompt.md
 ```
 
 ````
