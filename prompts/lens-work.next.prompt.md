@@ -1,6 +1,6 @@
 ---
 model: Claude Sonnet 4.6 (copilot)
-description: 'Recommend the next actionable task based on lifecycle state'
+description: 'Determine and execute the next actionable task based on lifecycle state'
 ---
 
 # lens-work.next (Stub)
