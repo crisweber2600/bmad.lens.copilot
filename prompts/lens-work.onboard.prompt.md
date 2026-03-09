@@ -1,6 +1,6 @@
 ````prompt
 ---
-description: 'Bootstrap control repo — detect provider, validate auth, create profile'
+description: 'Bootstrap control repo — detect provider, validate auth, create profile, auto-clone TargetProjects'
 ---
 
 # lens-work.onboard (Stub)
