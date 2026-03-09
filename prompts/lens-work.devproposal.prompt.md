@@ -1,6 +1,6 @@
 ---
 model: Claude Sonnet 4.6 (copilot)
-description: 'Start DevProposal phase — epics, stories, readiness check (John/PM, medium audience)'
+description: 'LENS Workbench prompt'
 ---
 
 # lens-work.devproposal (Stub)
@@ -9,5 +9,5 @@ description: 'Start DevProposal phase — epics, stories, readiness check (John/
 > All `_bmad/` paths in the full prompt are relative to `bmad.lens.release/` — do NOT resolve paths against the user's main project repo.
 
 ```
-Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.devproposal.prompt.md
+Read and follow all instructions in: bmad.lens.release/_bmad/lens-work/prompts/lens-work.devproposal.prompt.md
 ```

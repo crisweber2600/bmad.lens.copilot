@@ -1,6 +1,6 @@
 ---
 model: Claude Sonnet 4.6 (copilot)
-description: 'Start SprintPlan phase — sprint-status, story files (Bob/Scrum Master, large audience)'
+description: 'LENS Workbench prompt'
 ---
 
 # lens-work.sprintplan (Stub)
@@ -9,5 +9,5 @@ description: 'Start SprintPlan phase — sprint-status, story files (Bob/Scrum M
 > All `_bmad/` paths in the full prompt are relative to `bmad.lens.release/` — do NOT resolve paths against the user's main project repo.
 
 ```
-Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.sprintplan.prompt.md
+Read and follow all instructions in: bmad.lens.release/_bmad/lens-work/prompts/lens-work.sprintplan.prompt.md
 ```

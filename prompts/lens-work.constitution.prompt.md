@@ -1,6 +1,6 @@
 ---
 model: Claude Sonnet 4.6 (copilot)
-description: 'Resolve and display constitutional governance'
+description: 'LENS Workbench prompt'
 ---
 
 # lens-work.constitution (Stub)
@@ -9,5 +9,5 @@ description: 'Resolve and display constitutional governance'
 > All `_bmad/` paths in the full prompt are relative to `bmad.lens.release/` — do NOT resolve paths against the user's main project repo.
 
 ```
-Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.constitution.prompt.md
+Read and follow all instructions in: bmad.lens.release/_bmad/lens-work/prompts/lens-work.constitution.prompt.md
 ```
