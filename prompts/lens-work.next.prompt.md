@@ -1,5 +1,5 @@
-````prompt
 ---
+model: Claude Sonnet 4.6 (copilot)
 description: 'Recommend next action based on lifecycle state'
 ---
 
@@ -11,5 +11,3 @@ description: 'Recommend next action based on lifecycle state'
 ```
 Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.next.prompt.md
 ```
-
-````

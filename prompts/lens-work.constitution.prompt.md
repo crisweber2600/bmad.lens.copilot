@@ -1,5 +1,5 @@
-````prompt
 ---
+model: Claude Sonnet 4.6 (copilot)
 description: 'Resolve and display constitutional governance'
 ---
 
@@ -11,5 +11,3 @@ description: 'Resolve and display constitutional governance'
 ```
 Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.constitution.prompt.md
 ```
-
-````

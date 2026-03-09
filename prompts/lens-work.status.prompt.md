@@ -1,5 +1,5 @@
-````prompt
 ---
+model: Claude Sonnet 4.6 (copilot)
 description: 'Show consolidated status report across all active initiatives'
 ---
 
@@ -11,5 +11,3 @@ description: 'Show consolidated status report across all active initiatives'
 ```
 Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.status.prompt.md
 ```
-
-````

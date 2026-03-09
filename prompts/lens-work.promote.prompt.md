@@ -1,5 +1,5 @@
-````prompt
 ---
+model: Claude Sonnet 4.6 (copilot)
 description: 'Promote current audience to next level with gate checks'
 ---
 
@@ -11,5 +11,3 @@ description: 'Promote current audience to next level with gate checks'
 ```
 Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.promote.prompt.md
 ```
-
-````

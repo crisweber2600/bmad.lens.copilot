@@ -1,5 +1,5 @@
-````prompt
 ---
+model: Claude Sonnet 4.6 (copilot)
 description: 'Start TechPlan phase — architecture document, technical decisions (Winston/Architect)'
 ---
 
@@ -11,5 +11,3 @@ description: 'Start TechPlan phase — architecture document, technical decision
 ```
 Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.techplan.prompt.md
 ```
-
-````

@@ -1,5 +1,5 @@
-````prompt
 ---
+model: Claude Sonnet 4.6 (copilot)
 description: 'Create new service-level initiative within a domain'
 ---
 
@@ -11,5 +11,3 @@ description: 'Create new service-level initiative within a domain'
 ```
 Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.new-service.prompt.md
 ```
-
-````

@@ -1,5 +1,5 @@
-````prompt
 ---
+model: Claude Sonnet 4.6 (copilot)
 description: 'Show available commands and usage'
 ---
 
@@ -11,5 +11,3 @@ description: 'Show available commands and usage'
 ```
 Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.help.prompt.md
 ```
-
-````

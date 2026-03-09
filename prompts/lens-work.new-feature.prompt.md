@@ -1,5 +1,5 @@
-````prompt
 ---
+model: Claude Sonnet 4.6 (copilot)
 description: 'Create new feature-level initiative within a service'
 ---
 
@@ -11,5 +11,3 @@ description: 'Create new feature-level initiative within a service'
 ```
 Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.new-feature.prompt.md
 ```
-
-````

@@ -1,5 +1,5 @@
-````prompt
 ---
+model: Claude Sonnet 4.6 (copilot)
 description: 'Start SprintPlan phase — sprint-status, story files (Bob/Scrum Master, large audience)'
 ---
 
@@ -11,5 +11,3 @@ description: 'Start SprintPlan phase — sprint-status, story files (Bob/Scrum M
 ```
 Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.sprintplan.prompt.md
 ```
-
-````

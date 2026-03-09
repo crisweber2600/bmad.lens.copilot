@@ -1,5 +1,5 @@
-````prompt
 ---
+model: Claude Sonnet 4.6 (copilot)
 description: 'Create a new initiative (domain, service, or feature)'
 ---
 
@@ -11,5 +11,3 @@ description: 'Create a new initiative (domain, service, or feature)'
 ```
 Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.new-initiative.prompt.md
 ```
-
-````

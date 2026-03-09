@@ -1,5 +1,5 @@
-````prompt
 ---
+model: Claude Sonnet 4.6 (copilot)
 description: 'Start BusinessPlan phase — PRD creation, UX design (John/PM + Sally/UX, small audience)'
 ---
 
@@ -11,5 +11,3 @@ description: 'Start BusinessPlan phase — PRD creation, UX design (John/PM + Sa
 ```
 Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.businessplan.prompt.md
 ```
-
-````

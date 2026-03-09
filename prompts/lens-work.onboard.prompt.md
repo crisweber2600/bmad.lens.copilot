@@ -1,5 +1,5 @@
-````prompt
 ---
+model: Claude Sonnet 4.6 (copilot)
 description: 'Bootstrap control repo — detect provider, validate auth, create profile, auto-clone TargetProjects'
 ---
 
@@ -11,5 +11,3 @@ description: 'Bootstrap control repo — detect provider, validate auth, create 
 ```
 Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.onboard.prompt.md
 ```
-
-````

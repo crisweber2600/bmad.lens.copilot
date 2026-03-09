@@ -1,5 +1,5 @@
-````prompt
 ---
+model: Claude Sonnet 4.6 (copilot)
 description: 'Start PrePlan phase — brainstorm, research, product brief (Mary/Analyst, small audience)'
 ---
 
@@ -11,5 +11,3 @@ description: 'Start PrePlan phase — brainstorm, research, product brief (Mary/
 ```
 Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.preplan.prompt.md
 ```
-
-````

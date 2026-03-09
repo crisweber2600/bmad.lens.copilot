@@ -1,5 +1,5 @@
-````prompt
 ---
+model: Claude Sonnet 4.6 (copilot)
 description: 'Create new domain-level initiative with domain-only branch and folder scaffolding'
 ---
 
@@ -11,5 +11,3 @@ description: 'Create new domain-level initiative with domain-only branch and fol
 ```
 Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.new-domain.prompt.md
 ```
-
-````

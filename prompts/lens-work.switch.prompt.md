@@ -1,5 +1,5 @@
-````prompt
 ---
+model: Claude Sonnet 4.6 (copilot)
 description: 'Switch to a different initiative via git checkout'
 ---
 
@@ -11,5 +11,3 @@ description: 'Switch to a different initiative via git checkout'
 ```
 Read and follow all instructions in: bmad.lens.release/.github/prompts/lens-work.switch.prompt.md
 ```
-
-````
